@@ -3,4 +3,4 @@
 
 # 소프트웨어 구조 설계 다이어그램
 
-![image](https://user-images.githubusercontent.com/112471463/190301420-6b2a5aea-4358-43e6-a1c3-1442f8c711c6.png)
+![image](https://user-images.githubusercontent.com/113401359/190583378-821faa2f-57ca-4c98-a820-4ec4c841e5cf.png)
