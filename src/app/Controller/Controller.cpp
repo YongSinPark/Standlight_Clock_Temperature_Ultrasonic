@@ -6,6 +6,7 @@ Controller::Controller(Service *serv, ClockService *clockServ, TempHumidService 
     this->clockService = clockServ;
     this->tempHumidService = tempHumiService;
     this->lightState = LIGHT_OFF;
+    clockState = 0;
 }
 
 Controller::~Controller()
@@ -18,13 +19,26 @@ void Controller::updateEvent(std::string strBtn)
     {
         service->updateState("modeButton");
     }
+
     if (strBtn == "powerButton")
     {
         service->updateState("powerButton");
     }
+
+    if (strBtn == "motorButton")
+    {
+        tempHumidService->updateState("motorButton");
+    }
+
+    if (strBtn == "timerButton")
+    {
+        clockState = !clockState;
+    }
+
     if (strBtn == "clockUpdate")
     {
-        clockService->updateEvent();
+        if(clockState) clockService->updateEvent_timer();
+        if(!clockState) clockService->updateEvent();
     }
     
 }
@@ -32,4 +46,9 @@ void Controller::updateEvent(std::string strBtn)
 void Controller::updateTempHumid(DHT_Data dhtData)
 {
     tempHumidService->updateEvent(dhtData);
+}
+
+void Controller::updateDistance(int distance)
+{
+    service->updateDistance(distance);
 }

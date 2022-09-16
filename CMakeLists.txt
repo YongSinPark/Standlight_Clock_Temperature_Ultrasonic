@@ -19,6 +19,7 @@ add_executable(${PROJECT_NAME}
     ./src/hw/ClockCheck/ClockCheck.cpp
     ./src/hw/DHT11/DHT11.cpp
     ./src/hw/UltraSonic/UltraSonic.cpp
+    ./src/hw/Motor/Motor.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -33,6 +34,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     ./src/hw/ClockCheck
     ./src/hw/DHT11
     ./src/hw/UltraSonic
+    ./src/hw/Motor
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC

@@ -14,6 +14,7 @@ public:
     ClockService(ClockView *view);
     virtual ~ClockService();
     void updateEvent();
+    void updateEvent_timer();
 };
 
 #endif /* __CLOCKSERVICE_H__ */

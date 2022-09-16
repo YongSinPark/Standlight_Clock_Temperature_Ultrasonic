@@ -5,7 +5,7 @@
 #include "LightState.h"
 #include "Led.h"
 #include "LCD.h"
-
+#include "Motor.h"
 //enum {LIGHT_OFF, LIGHT_1, LIGHT_2, LIGHT_3, LIGHT_4, LIGHT_5};
 
 class View

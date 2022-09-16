@@ -15,3 +15,8 @@ void ClockService::updateEvent()
     struct tm *timeDate = localtime(&curTime);
     clockView->updateTime(timeDate);
 }
+
+void ClockService::updateEvent_timer()
+{
+    clockView->clockTimer();
+}
